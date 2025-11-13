@@ -1,0 +1,258 @@
+/* Global brand variables */
+:root {
+  --brand-primary: #10B981; /* emerald */
+  --brand-primary-600: #059669;
+  --brand-accent: #D4AF37;  /* subtle gold accent */
+  --ink-900: #0B1220;
+  --ink-700: #334155;
+  --ink-500: #64748B;
+  --surface-50: #F8FAFC;
+  --surface-100: #F1F5F9;
+}
+
+/* Hide Alpine cloaked nodes */
+[x-cloak] { display: none !important; }
+
+/* Entry reveal system: world‑class smoothness and accessibility */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--offset, 22px));
+  filter: none;
+  transition-property: opacity, transform, filter;
+  transition-duration: var(--dur, 850ms);
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+/* Directions */
+.reveal[data-animate="fade-up"] { transform: translateY(var(--offset, 22px)); }
+.reveal[data-animate="fade-left"] { transform: translateX(var(--offset, 22px)); }
+.reveal[data-animate="fade-right"] { transform: translateX(calc(var(--offset, 22px) * -1)); }
+.reveal[data-animate="zoom-in"] { transform: scale(0.995); }
+.reveal[data-animate="flip-up"] { transform: perspective(1000px) rotateX(4deg) translateY(var(--offset, 22px)); transform-origin: bottom; }
+/* Subtle media motion: images/videos come in gently */
+img.reveal, video.reveal { transform: translateY(var(--offset, 22px)) scale(0.995); }
+img.reveal.is-visible, video.reveal.is-visible { transform: none; }
+
+/* Micro stagger helper. JS will set --delay on children inside [data-stagger] containers. */
+[data-stagger] > .reveal { transition-delay: var(--delay, 0ms); }
+
+/* Reduced motion: opt-out of movement while keeping content visible */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+
+/* Hero slider helpers */
+.hero { position: relative; }
+.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1400ms ease-in-out; }
+.hero-slide.active { opacity: 1; }
+.hero-slide img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)); }
+
+/* Buttons: subtle elevated feel */
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand-primary), var(--brand-primary-600));
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 10px 20px -10px rgba(16,185,129,0.6);
+  transition: transform 250ms cubic-bezier(0.22,1,0.36,1), box-shadow 250ms ease;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -14px rgba(16,185,129,0.75); }
+.btn-outline {
+  background: var(--brand-primary);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 10px 20px -10px rgba(16,185,129,0.6);
+  transition: transform 250ms cubic-bezier(0.22,1,0.36,1), box-shadow 250ms ease, background 200ms ease;
+}
+.btn-outline:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -14px rgba(16,185,129,0.75); }
+
+/* Feature cards (Why Choose Us): world-class static design with tasteful hover) */
+.feature-card {
+  position: relative;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: saturate(150%) blur(6px);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.04);
+  transition: transform 300ms cubic-bezier(0.22,1,0.36,1), box-shadow 300ms ease, border-color 300ms ease;
+}
+/* Gradient halo border using mask technique */
+.feature-card::before {
+  content: "";
+  position: absolute; inset: -1px; border-radius: inherit;
+  background: conic-gradient(from 180deg at 50% 110%, var(--brand-accent), transparent 22%, rgba(16,185,129,0.35), transparent 66%);
+  -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  padding: 1px; pointer-events: none; opacity: 0.6;
+}
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 50px rgba(16, 24, 40, 0.12);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+.feature-card .icon {
+  width: 56px; height: 56px; border-radius: 0.875rem;
+  display: grid; place-items: center;
+  background: radial-gradient(100% 100% at 30% 20%, rgba(16,185,129,0.25), rgba(255,255,255,0) 60%),
+              linear-gradient(180deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06));
+  color: var(--brand-primary-600);
+  border: 1px solid rgba(16,185,129,0.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.feature-card h3 { color: #0f172a; font-weight: 800; letter-spacing: -0.01em; }
+.feature-card p { color: #475569; }
+
+/* Partners: logos only, on plain background color (no boxes, no shadows) */
+.partners { background: var(--surface-50); }
+.partner-logos { display: grid; gap: 2rem; grid-template-columns: repeat(2, minmax(0,1fr)); }
+@media (min-width: 640px) { .partner-logos { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (min-width: 1024px) { .partner-logos { grid-template-columns: repeat(6, minmax(0,1fr)); } }
+.partner-logos img {
+  display: block; margin: 0 auto; max-height: 56px; width: auto; object-fit: contain; object-position: center;
+  filter: none; opacity: 1; transition: transform 250ms cubic-bezier(0.22,1,0.36,1);
+}
+.partner-logos img:hover { transform: translateY(-2px); }
+
+/* Footer: premium layout */
+.footer {
+  background: #0f172a; color: #cbd5e1;
+}
+@media (max-width: 640px) {
+  .footer .grid { text-align: center; }
+}
+.footer .heading { color: #e2e8f0; font-weight: 700; }
+.footer a { color: #94a3b8; transition: color 200ms ease; }
+.footer a:hover { color: #e2e8f0; }
+.footer .divider {
+  height: 1px; width: 100%;
+  background: linear-gradient(90deg, rgba(16,185,129,0), rgba(16,185,129,0.8), rgba(212,175,55,0.8), rgba(16,185,129,0));
+  opacity: 0.6;
+}
+.footer .legal { color: #64748b; }
+
+/* Utility: section headers */
+.section-eyebrow {
+  display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(15,23,42,0.12); border-radius: 9999px; color: var(--ink-700);
+  background: #fff;
+}
+
+/* Utility: subtle container elevation */
+.surface {
+  background: #fff; border: 1px solid rgba(2,6,23,0.06); box-shadow: 0 8px 24px rgba(2,6,23,0.04); border-radius: 1rem;
+}
+
+/* Header nav hover override to use brand color */
+header[data-site-header] a:hover { color: var(--brand-primary) !important; }
+
+/* Force solid header (no transparency) */
+header[data-site-header] {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+/* Hide the "See All Brands" button inside partners section */
+.partners a[href="/brands.html"] { display: none !important; }
+
+/* Ensure pages starting with a section (e.g., products) sit below fixed header */
+header[data-site-header] + section:not(.hero) { margin-top: 5.25rem; }
+
+
+
+
+
+/* Slower, deeper motion for hero content */
+[data-hero] .reveal { --dur: 1200ms; --offset: 36px; }
+
+/* Header scrolled state enhancement */
+header[data-site-header].is-scrolled {
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  backdrop-filter: saturate(140%) blur(8px);
+}
+
+/* Hero button styling override: light emerald on imagery */
+.hero .btn-primary,
+.hero .btn-outline {
+  background: linear-gradient(180deg, #34D399, #10B981);
+  color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(16,185,129,0.35);
+  box-shadow: 0 10px 22px -8px rgba(16,185,129,0.45);
+  transition: transform 250ms cubic-bezier(0.22,1,0.36,1), box-shadow 250ms ease, filter 200ms ease;
+}
+.hero .btn-primary:hover,
+.hero .btn-outline:hover {
+  filter: brightness(0.96);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px -12px rgba(16,185,129,0.5);
+}
+
+/* Product grid cards: off-white squares with minimal hover */
+.product-card {
+  background: var(--surface-50);
+  border: 1px solid rgba(2,6,23,0.06);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(0.22,1,0.36,1), box-shadow 220ms ease, border-color 220ms ease;
+  display: flex; flex-direction: column;
+}
+.product-card .product-body { padding: 1rem; display: grid; place-items: center; }
+.product-card .brand-name { font-weight: 800; letter-spacing: -0.01em; color: #0f172a; }
+.product-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(2,6,23,0.12);
+  box-shadow: 0 16px 40px rgba(2,6,23,0.08);
+}
+.product-card .product-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1; /* perfect square */
+  background: #ffffff; /* plain white as requested */
+}
+.product-card .product-thumb img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-card .product-thumb .thumb-label {
+  position: absolute; inset: 0; z-index: 2;
+  display: grid; place-items: center;
+  font-weight: 800; letter-spacing: -0.01em;
+  color: #0f172a;
+}
+.product-card .product-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  padding: 0.85rem 0.9rem 1rem;
+}
+
+/* Loading shimmer for product squares (sits behind image) */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.product-card .product-thumb::after { display: none; }
+
+/* No-FOUC for reveal: prevent initial flash before JS anim attaches */
+html.reveal-init .reveal { opacity: 0; }
+html.reveal-ready .reveal { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-init .reveal, html.reveal-ready .reveal { opacity: 1 !important; }
+}
+
+/* Minimal breadcrumb token styles, using Tailwind for layout */
+.breadcrumb a { color: #475569; transition: color 180ms ease; }
+.breadcrumb a:hover { color: var(--brand-primary); }

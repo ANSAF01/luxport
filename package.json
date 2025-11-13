@@ -1,0 +1,32 @@
+{
+  "name": "luxport",
+  "version": "1.0.0",
+  "description": "Luxport - International B2B Trading Platform for luxury goods distribution",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [
+    "b2b",
+    "trading",
+    "international",
+    "commerce",
+    "luxury",
+    "hong-kong",
+    "watches",
+    "perfumes",
+    "bags",
+    "eyewear"
+  ],
+  "author": "Mohammed Ansaf",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/luxport.git"
+  },
+  "homepage": "https://luxport.com",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

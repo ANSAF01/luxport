@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bags • Luxport</title>
+  <meta name="description" content="Shop premium bags — curated selection of handbags and luggage." />
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logo.png" />
+
+  <!-- Tailwind CSS (Compiled) -->
+  <link rel="stylesheet" href="../dist/output.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header data-site-header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-3">
+          <img src="../assets/images/logo.png" alt="Luxport logo" class="h-10 w-auto" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="../products.html">Products</a>
+          <a class="nav-link" href="../about.html">About</a>
+          <a class="nav-link" href="../contact.html">Contact</a>
+        </nav>
+        <div class="lg:hidden">
+          <button @click="open = !open" class="p-2" aria-label="Toggle menu">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-cloak class="lg:hidden">
+      <div x-show="open" class="border-t bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+          <a href="../index.html" class="block">Home</a>
+          <a href="../products.html" class="block">Products</a>
+          <a href="../about.html" class="block">About</a>
+          <a href="../contact.html" class="block">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-20">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-slate-500">
+        <li><a href="../index.html" class="hover:text-emerald-600">Home</a></li>
+        <li class="text-slate-400">/</li>
+        <li><a href="../products.html" class="hover:text-emerald-600">Shop</a></li>
+        <li class="text-slate-400">/</li>
+        <li class="text-slate-700 font-semibold">Bags</li>
+      </ol>
+    </nav>
+
+    <!-- Title -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+      <h1 class="text-2xl md:text-3xl font-extrabold">Bags</h1>
+      <p class="text-slate-600 mt-2">Curated selection of premium handbags and luggage.</p>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8" data-stagger="120">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">BURBERRY</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">CALVIN KLEIN</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">COACH</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">DOLCE & GABBANA</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">FENDI</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">GUCCI</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">HERMES</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">LOUIS VUITTON</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">MICHAEL KORS</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">PRADA</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">SAMSONITE</div></div></article>
+        <article class="product-card reveal" data-animate="fade-up"><div class="product-thumb"><div class="thumb-label">VERSACE</div></div></article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Main Office</h4>
+          <p class="text-sm">123 Business Bay,<br />Kowloon, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Logistics Center</h4>
+          <p class="text-sm">456 Industrial Park,<br />New Territories, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Contact</h4>
+          <p class="text-sm">+852 1234 5678</p>
+          <p class="text-sm">info@Luxport.com</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Business Hours</h4>
+          <p class="text-sm">Mon–Fri: 9AM – 6PM</p>
+          <p class="text-sm">Sat: 9AM – 1PM</p>
+        </div>
+      </div>
+
+      <div class="mt-12 divider"></div>
+
+      <div class="mt-6 text-center legal text-sm">
+        <p>© 2025 Luxport. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

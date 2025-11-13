@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products • Luxport</title>
+  <meta name="description" content="Shop our curated selection of premium products across multiple categories." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Tailwind CSS (Compiled) -->
+  <link rel="stylesheet" href="dist/output.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header data-site-header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Luxport logo" class="h-10 w-auto" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="lg:hidden">
+          <button @click="open = !open" class="p-2" aria-label="Toggle menu">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-cloak class="lg:hidden">
+      <div x-show="open" class="border-t bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+          <a href="index.html" class="block">Home</a>
+          <a href="products.html" class="block">Products</a>
+          <a href="about.html" class="block">About</a>
+          <a href="contact.html" class="block">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- Featured Categories -->
+    <section class="py-16 bg-[var(--surface-50)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-extrabold reveal" data-animate="fade-up">Shop by Category</h2>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-6" data-stagger="140">
+          <!-- Watches -->
+          <a href="shop/watches.html" class="group block relative overflow-hidden rounded-xl h-44 reveal" data-animate="fade-up" aria-label="Watches">
+            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1200&auto=format&fit=crop" alt="Wristwatches category" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="inline-block bg-white/90 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full">Watches</span>
+            </div>
+          </a>
+
+          <!-- Perfumes -->
+          <a href="shop/perfumes.html" class="group block relative overflow-hidden rounded-xl h-44 reveal" data-animate="fade-up" aria-label="Perfumes">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop" alt="Perfume bottles category" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="inline-block bg-white/90 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full">Perfumes</span>
+            </div>
+          </a>
+
+          <!-- Eyewear -->
+          <a href="shop/eyewear.html" class="group block relative overflow-hidden rounded-xl h-44 reveal" data-animate="fade-up" aria-label="Eyewear">
+            <img src="assets/images/eyewear.png" alt="Eyewear and sunglasses category" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="inline-block bg-white/90 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full">Eyewear</span>
+            </div>
+          </a>
+
+          <!-- Bags -->
+          <a href="shop/bags.html" class="group block relative overflow-hidden rounded-xl h-44 reveal" data-animate="fade-up" aria-label="Bags">
+            <img src="assets/images/bag.png" alt="Bags and handbags category" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="inline-block bg-white/90 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full">Bags</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-[var(--surface-50)] text-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold reveal" data-animate="fade-up">Looking for specific SKUs or brands?</h2>
+        <p class="text-slate-600 mt-3 reveal" data-animate="fade-up" style="--delay: 140ms">We source on demand with competitive HK logistics and financing options.</p>
+        <div class="mt-6 reveal" data-animate="zoom-in" style="--delay: 220ms">
+          <a href="contact.html" class="btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Address</h4>
+          <p class="text-sm">Unit 1603, 16/F, The L. Plaza,<br />367 - 375 Queen's Road Central,<br />Sheung Wan, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Contact</h4>
+          <p class="text-sm">+852 1234 5678</p>
+          <p class="text-sm">info@Luxport.com</p>
+          <a class="mt-2 inline-flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors" href="https://wa.me/85212345678" rel="noopener" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+            WhatsApp
+          </a>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Business Hours</h4>
+          <p class="text-sm">Mon–Fri: 9AM – 6PM</p>
+          <p class="text-sm">Sat: 9AM – 1PM</p>
+        </div>
+      </div>
+
+      <div class="mt-12 divider"></div>
+
+      <div class="mt-6 text-center legal text-sm">
+        <p>© 2025 Luxport. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

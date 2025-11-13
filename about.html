@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Luxport</title>
+  <meta name="description" content="Learn about Luxport: Hong Kong-based B2B trading partner connecting businesses worldwide." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Tailwind CSS (Compiled) -->
+  <link rel="stylesheet" href="dist/output.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header data-site-header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Luxport logo" class="h-10 w-auto" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="lg:hidden">
+          <button @click="open = !open" class="p-2" aria-label="Toggle menu">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-cloak class="lg:hidden">
+      <div x-show="open" class="border-t bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+          <a href="index.html" class="block">Home</a>
+          <a href="products.html" class="block">Products</a>
+          <a href="about.html" class="block">About</a>
+          <a href="contact.html" class="block">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-emerald-50 to-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="reveal" data-animate="fade-right">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">About Us</h1>
+            <p class="text-lg text-slate-700 leading-relaxed">Luxport Trading Limited is a Hong Kong–based trading company specializing in the global distribution of watches, perfumes, designer bags, and sunglasses.</p>
+            <p class="text-lg text-slate-700 leading-relaxed mt-4">We connect trusted suppliers and retailers across international markets, delivering authentic, high-quality products that reflect timeless style and craftsmanship.</p>
+            <p class="text-lg text-slate-700 leading-relaxed mt-4 font-semibold text-emerald-700">At Luxport, our goal is simple — to make luxury accessible and reliable.</p>
+          </div>
+          <div class="reveal" data-animate="fade-left">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Luxport Trading team" class="rounded-xl shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-extrabold mb-8 text-center reveal" data-animate="fade-up">Our Approach</h2>
+          <div class="space-y-6">
+            <p class="text-slate-700 leading-relaxed reveal" data-animate="fade-up">Through a strong global sourcing network, strategic partnerships, and deep market insight, we ensure that every product we trade meets the highest standards of authenticity and excellence.</p>
+            <p class="text-slate-700 leading-relaxed reveal" data-animate="fade-up" style="--delay: 100ms">With Hong Kong's reputation as a leading international trade hub, Luxport Trading operates at the crossroads of East and West — enabling fast logistics, competitive pricing, and unmatched customer service for our global clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision, Values Section -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Mission & Vision -->
+        <div class="grid md:grid-cols-2 gap-12 mb-16" data-stagger="0">
+          <!-- Mission -->
+          <div class="reveal" data-animate="fade-up">
+            <div class="bg-white rounded-xl p-8 shadow-md border-l-4 border-emerald-600">
+              <h3 class="text-2xl font-extrabold mb-4 text-slate-900">Our Mission</h3>
+              <p class="text-slate-700 leading-relaxed">To be a trusted global partner in the goods trade, providing premium products and dependable service with integrity and efficiency.</p>
+            </div>
+          </div>
+
+          <!-- Vision -->
+          <div class="reveal" data-animate="fade-up">
+            <div class="bg-white rounded-xl p-8 shadow-md border-l-4 border-blue-600">
+              <h3 class="text-2xl font-extrabold mb-4 text-slate-900">Our Vision</h3>
+              <p class="text-slate-700 leading-relaxed">To become a leading name in international luxury trading, recognized for authenticity, trust, and long-term partnerships.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-3xl font-extrabold mb-10 text-center reveal" data-animate="fade-up">Our Values</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <!-- Authenticity -->
+            <div class="reveal" data-animate="fade-up">
+              <div class="bg-white rounded-lg p-6 shadow-md h-full hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-emerald-600">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 mb-2">Authenticity</h4>
+                <p class="text-sm text-slate-600">Every product we trade is 100% genuine and sourced from verified suppliers.</p>
+              </div>
+            </div>
+
+            <!-- Trust -->
+            <div class="reveal" data-animate="fade-up">
+              <div class="bg-white rounded-lg p-6 shadow-md h-full hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-blue-600">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 mb-2">Trust</h4>
+                <p class="text-sm text-slate-600">We believe strong relationships build sustainable business.</p>
+              </div>
+            </div>
+
+            <!-- Excellence -->
+            <div class="reveal" data-animate="fade-up">
+              <div class="bg-white rounded-lg p-6 shadow-md h-full hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-amber-600">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 mb-2">Excellence</h4>
+                <p class="text-sm text-slate-600">Quality and professionalism define every transaction.</p>
+              </div>
+            </div>
+
+            <!-- Efficiency -->
+            <div class="reveal" data-animate="fade-up">
+              <div class="bg-white rounded-lg p-6 shadow-md h-full hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-600">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 mb-2">Efficiency</h4>
+                <p class="text-sm text-slate-600">We deliver on time, every time.</p>
+              </div>
+            </div>
+
+            <!-- Innovation -->
+            <div class="reveal" data-animate="fade-up">
+              <div class="bg-white rounded-lg p-6 shadow-md h-full hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-purple-600">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 mb-2">Innovation</h4>
+                <p class="text-sm text-slate-600">We adapt to market trends and evolving consumer needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold mb-4 reveal" data-animate="fade-up">Ready to Partner with Us?</h2>
+        <p class="text-lg text-slate-600 mb-8 reveal" data-animate="fade-up" style="--delay: 100ms">Let's discuss how Luxport Trading can support your business with premium products and reliable service.</p>
+        <div class="reveal" data-animate="zoom-in" style="--delay: 200ms">
+          <a href="contact.html" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Address</h4>
+          <p class="text-sm">Unit 1603, 16/F, The L. Plaza,<br />367 - 375 Queen's Road Central,<br />Sheung Wan, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Contact</h4>
+          <p class="text-sm">+852 1234 5678</p>
+          <p class="text-sm">info@Luxport.com</p>
+          <a class="mt-2 inline-flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors" href="https://wa.me/85212345678" rel="noopener" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+            WhatsApp
+          </a>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Business Hours</h4>
+          <p class="text-sm">Mon–Fri: 9AM – 6PM</p>
+          <p class="text-sm">Sat: 9AM – 1PM</p>
+        </div>
+      </div>
+
+      <div class="mt-12 divider"></div>
+
+      <div class="mt-6 text-center legal text-sm">
+        <p>© 2025 Luxport. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

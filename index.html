@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luxport • International B2B Trading Platform | Hong Kong</title>
+  <meta name="description" content="Luxport Trading Limited - Your trusted global B2B trading partner connecting businesses with premium suppliers worldwide. Specializing in watches, perfumes, designer bags, and eyewear." />
+  <meta name="keywords" content="B2B trading, international commerce, luxury goods, Hong Kong trading, watches, perfumes, designer bags, eyewear, global suppliers" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="author" content="Mohammed Ansaf, Luxport Trading Limited" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#10B981" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://luxport.com/" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:url" content="https://luxport.com/" />
+  <meta property="og:title" content="Luxport • International B2B Trading Platform" />
+  <meta property="og:description" content="Your trusted global trading partner connecting businesses with premium suppliers worldwide." />
+  <meta property="og:image" content="https://luxport.com/assets/images/logo.png" />
+  <meta property="og:site_name" content="Luxport Trading" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://luxport.com/" />
+  <meta name="twitter:title" content="Luxport • International B2B Trading Platform" />
+  <meta name="twitter:description" content="Your trusted global trading partner connecting businesses with premium suppliers worldwide." />
+  <meta name="twitter:image" content="https://luxport.com/assets/images/logo.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <!-- Tailwind CSS (Compiled) -->
+  <link rel="stylesheet" href="dist/output.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Luxport Trading Limited",
+    "image": "https://luxport.com/assets/images/logo.png",
+    "description": "International B2B trading platform specializing in luxury goods distribution",
+    "url": "https://luxport.com",
+    "telephone": "+852-1234-5678",
+    "email": "info@luxport.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Business Bay",
+      "addressLocality": "Kowloon",
+      "addressRegion": "Hong Kong",
+      "postalCode": "",
+      "addressCountry": "HK"
+    },
+    "areaServed": {
+      "@type": "GeoShape",
+      "box": "-90 -180 90 180"
+    },
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/luxport",
+      "https://www.linkedin.com/company/luxport"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header data-site-header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Luxport logo" class="h-10 w-auto" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="lg:hidden">
+          <button @click="open = !open" class="p-2" aria-label="Toggle menu">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-cloak class="lg:hidden">
+      <div x-show="open" class="border-t bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+          <a href="index.html" class="block">Home</a>
+          <a href="products.html" class="block">Products</a>
+          <a href="about.html" class="block">About</a>
+          <a href="contact.html" class="block">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section data-hero class="hero relative h-[92vh] mt-20">
+    <div class="absolute inset-0">
+      <div class="hero-slide active">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1561414927-6d86591d0c4f?q=80&w=1920&auto=format&fit=crop" alt="Global trade and international shipping" loading="eager" style="opacity: 1;" />
+      </div>
+      <div class="hero-slide">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1920&auto=format&fit=crop" alt="Quality sourcing and warehouse operations" style="opacity: 1;" />
+      </div>
+      <div class="hero-slide">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1920&auto=format&fit=crop" alt="Seamless logistics and cargo transport" style="opacity: 1;" />
+      </div>
+    </div>
+
+    <div class="relative z-10 h-full flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="section-eyebrow">International B2B</span>
+          <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">Your Gateway to Global Trade</h1>
+          <p class="mt-4 text-white/90 text-lg md:text-xl">We connect businesses worldwide with verified manufacturers, transparent processes, and end-to-end logistics.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="products.html" class="btn-primary">Explore Products</a>
+            <a href="contact.html" class="btn-outline">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-[var(--surface-50)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold reveal" data-animate="fade-up">Your Trusted Global Trading Partner</h2>
+        <p class="mt-4 text-lg text-slate-600 reveal" data-animate="fade-up" style="--delay: 140ms">With a network spanning multiple continents, we connect businesses to premium suppliers and ensure reliability at every step.</p>
+        <div class="mt-8 reveal" data-animate="zoom-in" style="--delay: 260ms">
+          <a href="about.html" class="btn-outline">About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center" data-stagger="120">
+        <div class="reveal" data-animate="flip-up">
+          <div class="text-3xl md:text-4xl font-extrabold">500+</div>
+          <div class="text-emerald-700">Clients</div>
+        </div>
+        <div class="reveal" data-animate="flip-up">
+          <div class="text-3xl md:text-4xl font-extrabold">300+</div>
+          <div class="text-emerald-700">Suppliers</div>
+        </div>
+        <div class="reveal" data-animate="flip-up">
+          <div class="text-3xl md:text-4xl font-extrabold">35+</div>
+          <div class="text-emerald-700">Countries</div>
+        </div>
+        <div class="reveal" data-animate="flip-up">
+          <div class="text-3xl md:text-4xl font-extrabold">800+</div>
+          <div class="text-emerald-700">Brands</div>
+        </div>
+        <div class="reveal" data-animate="flip-up">
+          <div class="text-3xl md:text-4xl font-extrabold">25</div>
+          <div class="text-emerald-700">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="section-eyebrow reveal" data-animate="fade-up">Why choose us</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-extrabold reveal" data-animate="fade-up" style="--delay: 140ms">Built for reliability, speed, and scale</h2>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger="150">
+        <article class="feature-card reveal" data-animate="fade-up">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.93V20h-2v-3.07A8.001 8.001 0 014.07 13H1v-2h3.07A8.001 8.001 0 0111 4.07V1h2v3.07A8.001 8.001 0 0119.93 11H23v2h-3.07A8.001 8.001 0 0113 16.93z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Global Network</h3>
+          <p>Access verified suppliers across continents with strict quality assurance.</p>
+        </article>
+
+        <article class="feature-card reveal" data-animate="fade-up">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M2.25 12l8.955 8.955c.44.44 1.15.44 1.59 0L21.75 12 12.795 3.045c-.44-.44-1.15-.44-1.59 0L2.25 12z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Reliable Service</h3>
+          <p>Transparent processes and dedicated support at every step.</p>
+        </article>
+
+        <article class="feature-card reveal" data-animate="fade-up">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M3 7h18v2H3zm2 4h14v2H5zm3 4h8v2H8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Fast Delivery</h3>
+          <p>Efficient logistics partnerships ensuring timely shipments.</p>
+        </article>
+
+        <article class="feature-card reveal" data-animate="fade-up">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M12 1.5l3.09 6.26 6.91 1.005-5 4.873 1.18 6.897L12 17.77 5.82 20.535 7 13.638l-5-4.873 6.91-1.005L12 1.5z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Partnership</h3>
+          <p>Long-term relationships focused on mutual growth.</p>
+        </article>
+      </div>
+
+      <div class="mt-10 text-center reveal" data-animate="zoom-in" style="--delay: 150ms">
+        <a href="products.html" class="btn-outline">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold reveal" data-animate="fade-up">Our Shipping Partners</h2>
+        <p class="mt-3 text-slate-600 reveal" data-animate="fade-up" style="--delay: 120ms">Trusted carriers powering reliable, on-time delivery worldwide.</p>
+      </div>
+
+      <div class="partner-logos mt-12" data-stagger="120">
+        <img class="reveal" data-animate="fade-up" src="assets/images/dhl.png" alt="DHL" />
+        <img class="reveal" data-animate="fade-up" src="assets/images/fedex.png" alt="FedEx" />
+        <img class="reveal" data-animate="fade-up" src="assets/images/ups.png" alt="UPS" />
+        <img class="reveal" data-animate="fade-up" src="assets/images/dpd.png" alt="DPD" />
+        <img class="reveal" data-animate="fade-up" src="assets/images/tnt.png" alt="TNT" />
+        <img class="reveal" data-animate="fade-up" src="assets/images/usps.png" alt="USPS" />
+      </div>
+
+      <div class="mt-10 text-center reveal" data-animate="zoom-in" style="--delay: 150ms">
+        <a href="products.html" class="btn-outline">See All Brands</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center reveal" data-animate="fade-up">What Our Clients Say</h2>
+      <div class="mt-12 grid sm:grid-cols-1 md:grid-cols-3 gap-8" data-stagger="150">
+        <article class="surface p-8 reveal" data-animate="fade-up">
+          <p class="text-slate-600 italic">"Working with Luxport has been a game-changer for our business."</p>
+          <div class="mt-6 flex items-center gap-4">
+            <img src="https://placehold.co/48x48/E2E8F0/333333/png?text=C1" alt="Client 1" class="w-12 h-12 rounded-full" />
+            <div>
+              <p class="font-semibold">Client 1</p>
+              <p class="text-sm text-slate-500">CEO, Innovate Inc.</p>
+            </div>
+          </div>
+        </article>
+        <article class="surface p-8 reveal" data-animate="fade-up">
+          <p class="text-slate-600 italic">"Responsive, knowledgeable, and reliable. Highly recommended!"</p>
+          <div class="mt-6 flex items-center gap-4">
+            <img src="https://placehold.co/48x48/E2E8F0/333333/png?text=C2" alt="Client 2" class="w-12 h-12 rounded-full" />
+            <div>
+              <p class="font-semibold">Client 2</p>
+              <p class="text-sm text-slate-500">Supply Chain Manager, TechCorp</p>
+            </div>
+          </div>
+        </article>
+        <article class="surface p-8 reveal" data-animate="fade-up">
+          <p class="text-slate-600 italic">"They consistently deliver and help us streamline procurement."</p>
+          <div class="mt-6 flex items-center gap-4">
+            <img src="https://placehold.co/48x48/E2E8F0/333333/png?text=C3" alt="Client 3" class="w-12 h-12 rounded-full" />
+            <div>
+              <p class="font-semibold">Client 3</p>
+              <p class="text-sm text-slate-500">Operations Director, Fusion Goods</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Address</h4>
+          <p class="text-sm">Unit 1603, 16/F, The L. Plaza,<br />367 - 375 Queen's Road Central,<br />Sheung Wan, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Contact</h4>
+          <p class="text-sm">+852 1234 5678</p>
+          <p class="text-sm">info@Luxport.com</p>
+          <a class="mt-2 inline-flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors" href="https://wa.me/1234567890" rel="noopener" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+            WhatsApp
+          </a>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Business Hours</h4>
+          <p class="text-sm">Mon–Fri: 9AM – 6PM</p>
+          <p class="text-sm">Sat: 9AM – 1PM</p>
+        </div>
+      </div>
+
+      <div class="mt-12 divider"></div>
+
+      <div class="mt-6 text-center legal text-sm">
+        <p>© 2025 Luxport. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

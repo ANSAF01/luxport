@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Luxport</title>
+  <meta name="description" content="Contact Luxport in Hong Kong for B2B sourcing, logistics and partnerships." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Tailwind CSS (Compiled) -->
+  <link rel="stylesheet" href="dist/output.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header data-site-header x-data="{ open: false }" class="fixed inset-x-0 top-0 z-50 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Luxport logo" class="h-10 w-auto" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="lg:hidden">
+          <button @click="open = !open" class="p-2" aria-label="Toggle menu">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-cloak class="lg:hidden">
+      <div x-show="open" class="border-t bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+          <a href="index.html" class="block">Home</a>
+          <a href="products.html" class="block">Products</a>
+          <a href="about.html" class="block">About</a>
+          <a href="contact.html" class="block">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Form Section -->
+    <section class="mt-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white">
+          <div class="grid md:grid-cols-2">
+            <!-- Image Side -->
+            <div class="relative hidden md:block">
+              <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1600&auto=format&fit=crop" alt="Customer support and business communication" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+
+            <!-- Form Side -->
+            <div class="p-8 lg:p-10">
+              <h1 class="text-3xl md:text-4xl font-extrabold reveal" data-animate="fade-up">Send us a message</h1>
+              <p class="text-slate-600 mt-2 reveal" data-animate="fade-up" style="--delay: 120ms">We respond within one business day.</p>
+
+              <form class="mt-8 grid sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.'); this.reset();">
+                <div class="reveal" data-animate="fade-up">
+                  <label class="block text-sm text-slate-600">Name *</label>
+                  <input required class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]" />
+                </div>
+                <div class="reveal" data-animate="fade-up" style="--delay: 80ms">
+                  <label class="block text-sm text-slate-600">Email *</label>
+                  <input type="email" required class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]" />
+                </div>
+                <div class="reveal" data-animate="fade-up" style="--delay: 120ms">
+                  <label class="block text-sm text-slate-600">Phone *</label>
+                  <input type="tel" required class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]" />
+                </div>
+                <div class="reveal" data-animate="fade-up" style="--delay: 140ms">
+                  <label class="block text-sm text-slate-600">Company</label>
+                  <input class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]" />
+                </div>
+                <div class="sm:col-span-2 reveal" data-animate="fade-up" style="--delay: 160ms">
+                  <label class="block text-sm text-slate-600">Message *</label>
+                  <textarea rows="4" required class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]"></textarea>
+                </div>
+                <div class="sm:col-span-2 flex items-center justify-between reveal" data-animate="fade-up" style="--delay: 180ms">
+                  <div class="text-xs text-slate-500">By submitting, you agree to our Terms and Privacy Policy.</div>
+                  <button class="btn-primary">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Address</h4>
+          <p class="text-sm">Unit 1603, 16/F, The L. Plaza,<br />367 - 375 Queen's Road Central,<br />Sheung Wan, Hong Kong</p>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Contact</h4>
+          <p class="text-sm">+852 1234 5678</p>
+          <p class="text-sm">info@Luxport.com</p>
+          <a class="mt-2 inline-flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors" href="https://wa.me/85212345678" rel="noopener" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+            WhatsApp
+          </a>
+        </div>
+        <div class="reveal" data-animate="fade-up">
+          <h4 class="heading mb-4">Business Hours</h4>
+          <p class="text-sm">Mon–Fri: 9AM – 6PM</p>
+          <p class="text-sm">Sat: 9AM – 1PM</p>
+        </div>
+      </div>
+
+      <div class="mt-12 divider"></div>
+
+      <div class="mt-6 text-center legal text-sm">
+        <p>© 2025 Luxport. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
